@@ -2,10 +2,6 @@
 
 A game-specific Roblox Luau utility that keeps the Untitled Drift Game AFK state enabled and preserves its server-side ghost effect.
 
-## Preview
-
-<img width="401" height="402" alt="Untitled Drift Game AFK mode" src="https://github.com/user-attachments/assets/68b92c2f-f8d4-4b57-8f96-94f1fba40fac" />
-
 ## Usage
 
 ```lua
@@ -14,7 +10,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzt/UntitledDriftGam
 
 ## Features
 
-- Onyx-style draggable interface
+- clean, draggable, minimizable interface
 - Active/Disabled switch
 - Header-only minimize/restore behavior
 - Screen-edge drag clamping with `-57 / 57` vertical offsets
