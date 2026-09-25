@@ -1,3 +1,5 @@
+print("Zot is still awake.")
+
 if not game:IsLoaded() then
 	game.Loaded:Wait()
 end
