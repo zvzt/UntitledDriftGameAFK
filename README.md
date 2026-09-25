@@ -12,9 +12,21 @@ A game-specific Roblox Luau utility that keeps the Untitled Drift Game AFK state
 loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzt/UntitledDriftGameAFK/refs/heads/main/AFK.lua"))()
 ```
 
+## Features
+
+- Onyx-style draggable interface
+- Active/Disabled switch
+- Header-only minimize/restore behavior
+- Screen-edge drag clamping with `-57 / 57` vertical offsets
+- Sends the game's AFK state on and off through `AFKEvent`
+- Blocks game-side attempts to disable AFK while the tool is active
+- Disabling the switch explicitly sends `AFKEvent:FireServer(false,0)`
+- Closing the UI disables AFK
+- Session-based rerun handling prevents duplicate AFK loops
+
 ## How it works
 
-The script keeps the game's `AFKEvent` enabled and blocks calls that attempt to switch the AFK state off while the script is active.
+While active, the script keeps the game's `AFKEvent` enabled and blocks calls that attempt to switch the AFK state off. When the user disables the tool or closes the UI, it sends the game's AFK event with `false` and stops the active keep-alive session.
 
 ## Compatibility
 
